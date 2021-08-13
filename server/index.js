@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');;
-const { getTrucksController } = require('./trucks');
+const { compareJsonFiles } = require('./compare-json');
 
 const httpsPort = 5000;
 const app = express();
@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 //routes
-app.get("/", getTrucksController);
+app.get("/", compareJsonFiles);
 
 http
     .createServer({}, app)
