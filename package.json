@@ -1,0 +1,27 @@
+{
+  "name": "first-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "show-open-food-trucks": "./bin/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.2",
+    "proxyquire": "^2.1.3",
+    "rewiremock": "^3.14.3"
+  }
+}
