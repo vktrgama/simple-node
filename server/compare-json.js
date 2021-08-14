@@ -35,7 +35,7 @@ function deepCompare(obj1, obj2) {
     let result = {};
 
     if (Object.keys(obj1).length !== Object.keys(obj2).length) {
-        result[key] = { "obj_1": obj1, "obj_2": obj2 };
+        result[key] = { "obj_prod": obj1, "obj_stg": obj2 };
     }
 
     Object.keys(obj1 || {}).forEach(key => {
@@ -49,7 +49,7 @@ function deepCompare(obj1, obj2) {
         }
         
         if(val2 !== val1 && !isObject(val1) && !isObject(val2)) {
-            result[key] = { "val_1": val1, "val_2": val2};
+            result[key] = { "val_prod": val1, "val_stg": val2};
         }
 
         if (isObject(val1) && isObject(val2)) {
